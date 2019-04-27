@@ -91,166 +91,166 @@ func TestCreateSetGetOutOfBound(t *testing.T) {
 	}
 }
 
-func benchmarkArray_Get(size int, b *testing.B) {
+func benchmarkArrayGet(size int, b *testing.B) {
 	var array = CreateArray(size)
 	for n := 0; n < b.N; n++ {
 		array.Get(size - 1)
 	}
 }
 
-func BenchmarkArray_Get1(b *testing.B) {
-	benchmarkArray_Get(1, b)
+func BenchmarkArrayGet1(b *testing.B) {
+	benchmarkArrayGet(1, b)
 }
 
-func BenchmarkArray_Get2(b *testing.B) {
-	benchmarkArray_Get(2, b)
+func BenchmarkArrayGet2(b *testing.B) {
+	benchmarkArrayGet(2, b)
 }
 
-func BenchmarkArray_Get4(b *testing.B) {
-	benchmarkArray_Get(4, b)
+func BenchmarkArrayGet4(b *testing.B) {
+	benchmarkArrayGet(4, b)
 }
 
-func BenchmarkArray_Get8(b *testing.B) {
-	benchmarkArray_Get(8, b)
+func BenchmarkArrayGet8(b *testing.B) {
+	benchmarkArrayGet(8, b)
 }
 
-func BenchmarkArray_Get16(b *testing.B) {
-	benchmarkArray_Get(16, b)
+func BenchmarkArrayGet16(b *testing.B) {
+	benchmarkArrayGet(16, b)
 }
 
-func BenchmarkArray_Get32(b *testing.B) {
-	benchmarkArray_Get(32, b)
+func BenchmarkArrayGet32(b *testing.B) {
+	benchmarkArrayGet(32, b)
 }
 
-func BenchmarkArray_Get64(b *testing.B) {
-	benchmarkArray_Get(64, b)
+func BenchmarkArrayGet64(b *testing.B) {
+	benchmarkArrayGet(64, b)
 }
 
-func BenchmarkArray_Get128(b *testing.B) {
-	benchmarkArray_Get(128, b)
+func BenchmarkArrayGet128(b *testing.B) {
+	benchmarkArrayGet(128, b)
 }
 
-func BenchmarkArray_Get256(b *testing.B) {
-	benchmarkArray_Get(256, b)
+func BenchmarkArrayGet256(b *testing.B) {
+	benchmarkArrayGet(256, b)
 }
 
-func BenchmarkArray_Get512(b *testing.B) {
-	benchmarkArray_Get(512, b)
+func BenchmarkArrayGet512(b *testing.B) {
+	benchmarkArrayGet(512, b)
 }
 
-func BenchmarkArray_Get1024(b *testing.B) {
-	benchmarkArray_Get(1024, b)
+func BenchmarkArrayGet1024(b *testing.B) {
+	benchmarkArrayGet(1024, b)
 }
 
-func BenchmarkArray_Get2048(b *testing.B) {
-	benchmarkArray_Get(2048, b)
+func BenchmarkArrayGet2048(b *testing.B) {
+	benchmarkArrayGet(2048, b)
 }
 
-func benchmarkArray_Set(size int, b *testing.B) {
+func benchmarkArraySet(size int, b *testing.B) {
 	var array = CreateArray(size)
 	for n := 0; n < b.N; n++ {
-		array.Set(size - 1, 1)
+		array.Set(size-1, 1)
 	}
 }
 
-func BenchmarkArray_Set1(b *testing.B) {
-	benchmarkArray_Set(1, b)
+func BenchmarkArraySet1(b *testing.B) {
+	benchmarkArraySet(1, b)
 }
 
-func BenchmarkArray_Set2(b *testing.B) {
-	benchmarkArray_Set(2, b)
+func BenchmarkArraySet2(b *testing.B) {
+	benchmarkArraySet(2, b)
 }
 
-func BenchmarkArray_Set4(b *testing.B) {
-	benchmarkArray_Set(4, b)
+func BenchmarkArraySet4(b *testing.B) {
+	benchmarkArraySet(4, b)
 }
 
-func BenchmarkArray_Set8(b *testing.B) {
-	benchmarkArray_Set(8, b)
+func BenchmarkArraySet8(b *testing.B) {
+	benchmarkArraySet(8, b)
 }
 
-func BenchmarkArray_Set16(b *testing.B) {
-	benchmarkArray_Set(16, b)
+func BenchmarkArraySet16(b *testing.B) {
+	benchmarkArraySet(16, b)
 }
 
-func BenchmarkArray_Set32(b *testing.B) {
-	benchmarkArray_Set(32, b)
+func BenchmarkArraySet32(b *testing.B) {
+	benchmarkArraySet(32, b)
 }
 
-func BenchmarkArray_Set64(b *testing.B) {
-	benchmarkArray_Set(64, b)
+func BenchmarkArraySet64(b *testing.B) {
+	benchmarkArraySet(64, b)
 }
 
-func BenchmarkArray_Set128(b *testing.B) {
-	benchmarkArray_Set(128, b)
+func BenchmarkArraySet128(b *testing.B) {
+	benchmarkArraySet(128, b)
 }
 
-func BenchmarkArray_Set256(b *testing.B) {
-	benchmarkArray_Set(256, b)
+func BenchmarkArraySet256(b *testing.B) {
+	benchmarkArraySet(256, b)
 }
 
-func BenchmarkArray_Set512(b *testing.B) {
-	benchmarkArray_Set(512, b)
+func BenchmarkArraySet512(b *testing.B) {
+	benchmarkArraySet(512, b)
 }
 
-func BenchmarkArray_Set1024(b *testing.B) {
-	benchmarkArray_Set(1024, b)
+func BenchmarkArraySet1024(b *testing.B) {
+	benchmarkArraySet(1024, b)
 }
 
-func BenchmarkArray_Set2048(b *testing.B) {
-	benchmarkArray_Set(2048, b)
+func BenchmarkArraySet2048(b *testing.B) {
+	benchmarkArraySet(2048, b)
 }
 
-func benchmarkArray_Create(size int, b *testing.B) {
+func benchmarkArrayCreate(size int, b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		var _ = CreateArray(size)
 	}
 }
 
-func BenchmarkArray_Create1(b *testing.B) {
-	benchmarkArray_Create(1, b)
+func BenchmarkArrayCreate1(b *testing.B) {
+	benchmarkArrayCreate(1, b)
 }
 
-func BenchmarkArray_Create2(b *testing.B) {
-	benchmarkArray_Create(2, b)
+func BenchmarkArrayCreate2(b *testing.B) {
+	benchmarkArrayCreate(2, b)
 }
 
-func BenchmarkArray_Create4(b *testing.B) {
-	benchmarkArray_Create(4, b)
+func BenchmarkArrayCreate4(b *testing.B) {
+	benchmarkArrayCreate(4, b)
 }
 
-func BenchmarkArray_Create8(b *testing.B) {
-	benchmarkArray_Create(8, b)
+func BenchmarkArrayCreate8(b *testing.B) {
+	benchmarkArrayCreate(8, b)
 }
 
-func BenchmarkArray_Create16(b *testing.B) {
-	benchmarkArray_Create(16, b)
+func BenchmarkArrayCreate16(b *testing.B) {
+	benchmarkArrayCreate(16, b)
 }
 
-func BenchmarkArray_Create32(b *testing.B) {
-	benchmarkArray_Create(32, b)
+func BenchmarkArrayCreate32(b *testing.B) {
+	benchmarkArrayCreate(32, b)
 }
 
-func BenchmarkArray_Create64(b *testing.B) {
-	benchmarkArray_Create(64, b)
+func BenchmarkArrayCreate64(b *testing.B) {
+	benchmarkArrayCreate(64, b)
 }
 
-func BenchmarkArray_Create128(b *testing.B) {
-	benchmarkArray_Create(128, b)
+func BenchmarkArrayCreate128(b *testing.B) {
+	benchmarkArrayCreate(128, b)
 }
 
-func BenchmarkArray_Create256(b *testing.B) {
-	benchmarkArray_Create(256, b)
+func BenchmarkArrayCreate256(b *testing.B) {
+	benchmarkArrayCreate(256, b)
 }
 
-func BenchmarkArray_Create512(b *testing.B) {
-	benchmarkArray_Create(512, b)
+func BenchmarkArrayCreate512(b *testing.B) {
+	benchmarkArrayCreate(512, b)
 }
 
-func BenchmarkArray_Create1024(b *testing.B) {
-	benchmarkArray_Create(1024, b)
+func BenchmarkArrayCreate1024(b *testing.B) {
+	benchmarkArrayCreate(1024, b)
 }
 
-func BenchmarkArray_Create2048(b *testing.B) {
-	benchmarkArray_Create(2048, b)
+func BenchmarkArrayCreate2048(b *testing.B) {
+	benchmarkArrayCreate(2048, b)
 }
